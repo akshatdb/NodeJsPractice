@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1= title
+	h2 Book List
+
+	ul
+		for book in book_list
+			li
+				h3= book['title']
+				p written by !{book.author.name}
+				a(href='/book/'+book.id) open
